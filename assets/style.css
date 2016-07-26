@@ -68,4 +68,8 @@
   float: right;
   background: #769;
   margin: 2.5%;
+  cursor: pointer;
+}
+#container .game .cards .verso {
+  position: absolute;
 }
