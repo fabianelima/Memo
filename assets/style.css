@@ -10,13 +10,17 @@
 }
 #container {
   width: 100%;
-  padding-bottom: 25%;
   max-width: 1080px;
-  margin: auto;
+  margin: 0 auto;
   font-size: 1.1em;
   font-family: 'Open Sans', sans-serif;
   position: relative;
-  background: #e7e7e7;
+}
+#container h1 {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #59867f;
+  font-size: 2em;
 }
 #container .intro-game,
 #container .end-game {
@@ -24,18 +28,27 @@
   padding: 5%;
   margin: 10%;
   position: absolute;
-  border: 2px solid #669;
   text-align: center;
+}
+#container .intro-game span,
+#container .end-game span {
+  font-weight: bold;
 }
 #container .end-game {
   display: none;
 }
 #container .start,
 #container .again {
-  background: #578;
+  background: #59867f;
   padding: 2%;
   margin: 2%;
   cursor: pointer;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #000;
+  font-weight: bold;
+  border: 3px solid #e7e7e7;
+  color: white;
+  text-transform: uppercase;
 }
 #container .game {
   width: 100%;
@@ -45,6 +58,7 @@
 #container .game .cards {
   width: 90%;
   height: 100%;
+  margin: 0 5%;
 }
 #container .game .cards .card0,
 #container .game .cards .card1,
@@ -66,9 +80,9 @@
   width: 20%;
   height: 30%;
   float: right;
-  background: #769;
   margin: 2.5%;
   cursor: pointer;
+  text-align: center;
 }
 #container .game .cards .verso {
   position: absolute;

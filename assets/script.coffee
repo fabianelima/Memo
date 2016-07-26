@@ -22,9 +22,12 @@ $ ->
 			]
 
 	score = 0
+	attempts = 0
 
 	### Inicia o jogo ###
-	$('.start').on 'click', ->
+	$('.start,.again').on 'click', ->
+		score = 0
+		attempts = 0
 		$(this).parent().fadeOut()
 		$('.game').fadeIn()
 
@@ -32,7 +35,6 @@ $ ->
 
 		for i in [0...shuffleCards.length]
 			$('.cards .card' + i).html(shuffleCards[i])
-		return
 
 	### Algoritmo de ordenação Fisher Yates ###
 	fisherYates = (arr) ->
@@ -53,10 +55,12 @@ $ ->
 			k = $(this).attr('class').split('card')[1]
 			$('.card' + k + ' .verso').hide()
 			$('.card' + k).addClass('escolha' + l)
+			$(this).css('pointer-events','none')
 
 			if l == 2
-				$('.cards *').css('pointer-events','none')
 				l = 0
+				attempts++
+				$('.cards *').css('pointer-events','none')
 				
 				if $('.escolha1').html() == $('.escolha2').html()
 					score++
@@ -69,11 +73,11 @@ $ ->
 						$('.cards *').css('pointer-events','auto')
 						$('.cards *').removeClass('escolha1')
 						$('.cards *').removeClass('escolha2')
-						return
 					, 1000
 
 			if score == 8
-				$('.game').hide()
-				$('.end-game').show()
-			return
-		return
+				setTimeout ->
+					$('.game').fadeOut()
+					$('.end-game').fadeIn()
+					$('.end-game span').html(attempts)
+				, 1000
