@@ -1,0 +1,71 @@
+/**STYLE**/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+#container {
+  width: 100%;
+  padding-bottom: 25%;
+  max-width: 1080px;
+  margin: auto;
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  background: #e7e7e7;
+}
+#container .intro-game,
+#container .end-game {
+  width: 70%;
+  padding: 5%;
+  margin: 10%;
+  position: absolute;
+  border: 2px solid #669;
+  text-align: center;
+}
+#container .end-game {
+  display: none;
+}
+#container .start,
+#container .again {
+  background: #578;
+  padding: 2%;
+  margin: 2%;
+  cursor: pointer;
+}
+#container .game {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#container .game .cards {
+  width: 90%;
+  height: 100%;
+}
+#container .game .cards .card0,
+#container .game .cards .card1,
+#container .game .cards .card2,
+#container .game .cards .card3,
+#container .game .cards .card4,
+#container .game .cards .card5,
+#container .game .cards .card6,
+#container .game .cards .card7,
+#container .game .cards .card8,
+#container .game .cards .card9,
+#container .game .cards .card10,
+#container .game .cards .card11,
+#container .game .cards .card12,
+#container .game .cards .card13,
+#container .game .cards .card14,
+#container .game .cards .card15,
+#container .game .cards .card16 {
+  width: 20%;
+  height: 30%;
+  float: right;
+  background: #769;
+  margin: 2.5%;
+}
