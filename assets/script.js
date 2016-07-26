@@ -1,3 +1,11 @@
+
+/*
+
+	  MEMO 1.0
+	------------
+	Fabiane Lima
+ */
+
 (function() {
   $(function() {
     var attempts, cards, fisherYates, i, l, score, _i, _ref, _results;
